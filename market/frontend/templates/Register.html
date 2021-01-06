@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>註冊頁面</title>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<script src="static/js/jquery-3.5.1.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<script src="static/js/register.js"></script>
+	<style>
+		body{
+			font-family:Microsoft YaHei;
+		}
+		.bg-light{
+			background-color:#ECF5FF !important; 
+		}
+		.nav-item{
+			margin:10px;
+			font-size:1.2em !important;
+		}
+		footer{
+			background-color:#D2E9FF;
+			padding:15px;
+		}
+		.input-group{
+			margin:25px;
+		}
+		h2{
+			color:#0088A8;
+		}
+		.log{
+			padding:5px;
+		}
+		a{
+			color:black;
+		}
+		.d-flex{
+			z-index: 1;
+		}
+		.success{
+			 display:none;
+			 position:absolute;
+			 z-index:2;
+			 margin-left:200px;
+			 margin-top:100px;
+			 background-color: white;
+			 border:1px solid;
+			 width:700px;
+			 height:300px;
+			 text-align: center;
+			 padding-top:100px;
+		}
+	</style>
+</head>
+<body>
+
+
+	<div class="container">
+		<!-- navbar start -->
+		<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+		  <a class="navbar-brand" href="/index"><img src="static/image/LOGO.png" alt=""></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		    	<li class="nav-item active">
+		    		<a class="nav-link" href="/index" onMouseOver="this.style.color='#0080FF'" onMouseOut="this.style.color='#000000'">首頁</a>
+		    	</li>
+		    	<!-- login logout register: control by information -->
+		    	<li class="nav-item active">
+		    		<!-- img future-->
+		    		 <a href="/about" class="nav-link" onMouseOver="this.style.color='#0080FF'" onMouseOut="this.style.color='#000000'">關於我們</a>
+		    	</li>
+		    </ul>
+			  <form class="form-inline login_check">
+			  </form>
+		   </div>
+		</nav>
+		<!-- navbar end -->
+
+		<!-- Main Code start -->
+		<div class="success">
+		    <h2>
+		        註冊成功！點擊下方按鈕可返回首頁
+		    </h2>
+		    <button onclick="toIndex()" class="btn btn-info">
+		        返回首頁
+		    </button>
+		</div>
+		<div class="d-flex">
+			<div class="row mx-auto">
+				<div class="col-6">
+					<img src="static/image/LoginLogo.png" alt="" style="width:100%;height:100%">
+				</div>
+				<div class="col-6 registerBlock">
+					<form action="javascript:void(0);" method="POST">
+						<div class="input-group">
+							<h2>
+								註冊成為會員!
+							</h2>
+						</div>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+									使用者名稱
+								</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Username" name="username">
+							<div class="check" id="checkUsername"></div>
+						</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										密碼
+									</span>
+								</div>
+								<input type="password" class="form-control" placeholder="password" name="pwd1">
+								<br>
+								<div class="check" id="checkPassword"></div>
+							</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										確認密碼
+									</span>
+									<input type="password" class="form-control" placeholder="password" name="pwd2">
+									<div class="check" id="checkPwd2"></div>
+								</div>
+							</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										E-mail
+									</span>
+									<input type="text" class="form-control" placeholder="email" name="email">
+									<div class="check" id="checkEmail"></div>
+								</div>
+							</div>
+							<div class="input-group">
+								<div class="input-group-prepend">
+									<span class="input-group-text">
+										聯絡電話
+									</span>
+									<input type="text" class="form-control" placeholder="phone" name="phone">
+									<div class="check" id="checkEmail"></div>
+								</div>
+							</div>
+							<div class="input-group">
+								<span class="input-group-text">
+									收貨地址
+								</span>
+								<input type="text" class="form-control" name="add1" placeholder="請完整填入">
+							</div>
+							<div class="input-group">
+								<!-- <input type="submit" class="btn btn-info" value="註冊"> -->
+								<button onclick="register()" class="btn btn-info">註冊</button>
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+			<!-- Main code end -->
+			
+
+			<!-- footer start -->
+			<footer class="page-footer font-small">
+				<div class="container-fluid text-center text-md-left">
+					    <!-- Grid row -->
+					    <div class="row">
+					      <!-- Grid column -->
+					      <div class="col-md-6 mt-md-0 mt-3">
+					        <!-- Content -->
+					        <h5 class="text-uppercase">關於我們</h5>
+					        <br>
+					        <p>Login 3C產品市集是由一群熱愛科技的人所成立的網購平台，提供便宜的價格以及優良的產品。</p>
+					      </div>
+					      <!-- Grid column -->
+
+					      <hr class="clearfix w-100 d-md-none pb-3">
+
+					      <!-- Grid column -->
+					      <div class="col-md-3 mb-md-0 mb-3">
+
+
+					      </div>
+					      <!-- Grid column -->
+
+					      <!-- Grid column -->
+					      <div class="col-md-3 mb-md-0 mb-3">
+
+					        <!-- Links -->
+					        <h5 class="text-uppercase">聯繫我們</h5>
+
+					        <ul class="list-unstyled">
+					          <li>
+					            <a href="#!">Facebook</a>
+					          </li>
+					          <li>
+					            <a href="#!">Instagram</a>
+					          </li>
+					          <li>
+					            <a href="#!">E-mail</a>
+					          </li>
+					        </ul>
+
+					      </div>
+					      <!-- Grid column -->
+
+					    </div>
+					    <!-- Grid row -->
+				</div>
+			</footer>
+			<!-- footer end -->		
+		</div>
+	<script src="/static/js/constant.js"></script>
+	<script src="/static/js/template.js"></script>
+	<script src="static/js/login_check.js"></script>
+	<script>
+		login_check();
+	</script>
+
+</body>
+</html>

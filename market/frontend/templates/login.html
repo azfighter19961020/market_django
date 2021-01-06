@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>登入頁面</title>
+	<link rel="stylesheet" href="static/css/bootstrap.min.css">
+	<script src="static/js/jquery-3.5.1.js"></script>
+	<script src="static/js/bootstrap.min.js"></script>
+	<style>
+		body{
+			font-family:Microsoft YaHei;
+		}
+		.bg-light{
+			background-color:#ECF5FF !important; 
+		}
+		.nav-item{
+			margin:10px;
+			font-size:1.2em !important;
+		}
+		footer{
+			background-color:#D2E9FF;
+			padding:15px;
+		}
+		.input-group{
+			margin:25px;
+		}
+		.loginBlock{
+			padding-top:80px;
+		}
+		.log{
+			padding:5px;
+		}
+		a{
+			color:black;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<nav class="navbar navbar-expand-lg navbar-light bg-light ">
+		  <a class="navbar-brand" href="/index"><img src="static/image/LOGO.png" alt=""></a>
+		  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+		    <span class="navbar-toggler-icon"></span>
+		  </button>
+		  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+		    <ul class="navbar-nav mr-auto">
+		    	<li class="nav-item active">
+		    		<a class="nav-link" href="/index" onMouseOver="this.style.color='#0080FF'" onMouseOut="this.style.color='#000000'">首頁</a>
+		    	</li>
+		    	<!-- login logout register: control by information -->
+		    	<li class="nav-item active">
+		    		<!-- img future-->
+		    		 <a href="/about" class="nav-link" onMouseOver="this.style.color='#0080FF'" onMouseOut="this.style.color='#000000'">關於我們</a>
+		    	</li>
+		    </ul>
+			  <form class="form-inline login_check">
+			  </form>
+		   </div>
+		</nav>
+		<div class="d-flex">
+			<div class="row mx-auto">
+				<div class="col-6">
+					<img src="static/image/LoginLogo.png" alt="" style="width:100%;height:100%">
+				</div>
+				<div class="col-6 loginBlock">
+					<form action="javascript:void(0);" method="POST">
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+									Username
+								</span>
+							</div>
+							<input type="text" class="form-control" placeholder="Username" name="username">
+						</div>
+						<div class="input-group">
+							<div class="input-group-prepend">
+								<span class="input-group-text">
+									password
+								</span>
+							</div>
+							<input type="password" class="form-control" placeholder="Password" name="password">
+						</div>
+						<div class="input-group">
+							<button onclick="login()" class="btn btn-info">登入</button>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+		<footer class="page-footer font-small">
+			<div class="container-fluid text-center text-md-left">
+				    <!-- Grid row -->
+				    <div class="row">
+				      <!-- Grid column -->
+				      <div class="col-md-6 mt-md-0 mt-3">
+				        <!-- Content -->
+				        <h5 class="text-uppercase">關於我們</h5>
+				        <br>
+				        <p>Login 3C產品市集是由一群熱愛科技的人所成立的網購平台，提供便宜的價格以及優良的產品。</p>
+				      </div>
+				      <!-- Grid column -->
+
+				      <hr class="clearfix w-100 d-md-none pb-3">
+
+				      <!-- Grid column -->
+				      <div class="col-md-3 mb-md-0 mb-3">
+
+
+				      </div>
+				      <!-- Grid column -->
+
+				      <!-- Grid column -->
+				      <div class="col-md-3 mb-md-0 mb-3">
+
+				        <!-- Links -->
+				        <h5 class="text-uppercase">聯繫我們</h5>
+
+				        <ul class="list-unstyled">
+				          <li>
+				            <a href="#!">Facebook</a>
+				          </li>
+				          <li>
+				            <a href="#!">Instagram</a>
+				          </li>
+				          <li>
+				            <a href="#!">E-mail</a>
+				          </li>
+				        </ul>
+
+				      </div>
+				      <!-- Grid column -->
+
+				    </div>
+				    <!-- Grid row -->
+			</div>
+		</footer>		
+	</div>
+	<script src="/static/js/constant.js"></script>
+	<script src="/static/js/template.js"></script>
+	<script src="static/js/login_check.js"></script>
+	<script>
+		login_check();
+	</script>
+	<script src="static/js/login.js"></script>
+</body>
+</html>
