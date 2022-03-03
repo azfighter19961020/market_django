@@ -29,4 +29,4 @@
 
 <h3>示例：</h3>
 
-<a href="http://35.194.184.48:5000/index">點我前往</a>
+<a href="http://crystaltechzone.in:5002/index">點我前往</a>
