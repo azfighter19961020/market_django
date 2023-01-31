@@ -27,6 +27,3 @@
 	<li>Mysql</li>
 </ul>
 
-<h3>示例：</h3>
-
-<a href="http://crystaltechzone.in:5002/index">點我前往</a>
